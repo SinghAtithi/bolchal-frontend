@@ -9,8 +9,7 @@ function verifyposts() {
 
     const removePost = (id) => {
         axios
-            .post("https://tasty-newt-suit.cyclic.app
-/api/removePost", {
+            .post("https://tasty-newt-suit.cyclic.app/api/removePost", {
                 id: id,
                 userName: "admin",
             })
