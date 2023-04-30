@@ -19,9 +19,13 @@ function Cards(props) {
     // }, []);
 
     return (
-        <div className="card w-fit max-w-md my-12  bg-base-100 shadow-xl mx-8 image-full ">
+        <div className="card  scale-75 max-w-md my-12 text-lg  bg-base-100 opacity-70 shadow-xl mx-8 image-full ">
             <figure>
-                <img src={imageUrl} alt="Shoes" className="image-full scale-125" />
+                <img
+                    src={imageUrl}
+                    alt="Shoes"
+                    className="image-full scale-125"
+                />
             </figure>
             <div className="card-body m-auto">
                 <p className="whitespace-normal break-words">
