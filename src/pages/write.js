@@ -7,7 +7,7 @@ function write() {
 
       const submitText = () => {
             console.log(text);
-            axios.post("https://tasty-newt-suit.cyclic.app/ api / write", {
+            axios.post("https://tasty-newt-suit.cyclic.app/api/write", {
                   text: text,
             }).then((result) => {
                   setText("");
