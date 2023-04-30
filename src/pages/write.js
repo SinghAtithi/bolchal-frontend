@@ -7,9 +7,8 @@ function write() {
 
       const submitText = () => {
             console.log(text);
-            axios.post("http://localhost:5005/api/write", {
+            axios.post("https://tasty-newt-suit.cyclic.app/ api / write", {
                   text: text,
-                  
             }).then((result) => {
                   setText("");
                   alert("The Post has been sent to get Verified!")

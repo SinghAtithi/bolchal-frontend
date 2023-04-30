@@ -8,7 +8,7 @@ function index() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/api/getAllPosts").then((res) => {
+    axios.get("https://tasty-newt-suit.cyclic.app/api/getAllPosts").then((res) => {
       setPosts(res.data);
     });
   }, [])

@@ -9,7 +9,8 @@ function verifyposts() {
 
     const removePost = (id) => {
         axios
-            .post("http://localhost:5005/api/removePost", {
+            .post("https://tasty-newt-suit.cyclic.app
+/api/removePost", {
                 id: id,
                 userName: "admin",
             })
@@ -23,7 +24,7 @@ function verifyposts() {
     const verifyPost = (id) => {
         console.log(id);
         axios
-            .post("http://localhost:5005/api/verifyPost", { id: id })
+            .post("https://tasty-newt-suit.cyclic.app/api/verifyPost", { id: id })
             .then((res) => {
                 console.log(res);
             });
@@ -32,7 +33,7 @@ function verifyposts() {
 
     const fetchPosts = () => {
         axios
-            .get("http://localhost:5005/api/getUnverifiedPosts")
+            .get("https://tasty-newt-suit.cyclic.app/api/getUnverifiedPosts")
             .then((response) => {
                 console.log(response.data);
                 setPosts(response.data);
