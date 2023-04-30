@@ -12,21 +12,23 @@ function Cards(props) {
     //             "https://api.unsplash.com/photos/random?query=nature&count=10&client_id=bIqZlu3Zb7L8swVJcM5NHXdaPPTcUtyMuUStBmF6e34"
     //         )
     //         .then((res) => {
-    //             console.log(res.data[0].urls.regular);
-    //             const imageURL = res.data[0].urls.regular;
+    //             console.log(res.data[0].urls);
+    //             const imageURL = res.data[0].urls.small;
     //             setImageUrl(imageURL);
     //         });
     // }, []);
 
     return (
-        <div className="card w-1/5 mx-12 my-12 flex-wrap bg-base-100 shadow-xl image-full ">
+        <div className="card w-fit max-w-md my-12  bg-base-100 shadow-xl mx-8 image-full ">
             <figure>
-                <img src={imageUrl} alt="Shoes" />
+                <img src={imageUrl} alt="Shoes" className="image-full scale-125" />
             </figure>
             <div className="card-body m-auto">
-                <p>{props.content}</p>
+                <p className="whitespace-normal break-words">
+                    <pre>{props.content}</pre>
+                </p>
                 <div className="card-actions justify-end flex ml-auto">
-                    <p>{`- ${props.author}`}</p>
+                    <p className="">{`- ${props.author}`}</p>
                 </div>
             </div>
         </div>

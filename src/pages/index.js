@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
+import axios from 'axios';
 import Cards from '../components/Cards'
 
 function index() {
@@ -7,17 +8,14 @@ function index() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5005/api/getAllPosts')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        setPosts(data)
-      })
+    axios.get("http://localhost:5005/api/getAllPosts").then((res) => {
+      setPosts(res.data);
+    });
   }, [])
 
 
   return (
-    <div className='flex w-full flex-wrap justify-evenly'>
+    <div className='flex flex-wrap justify-evenly'>
       {posts.map((post) => {
         return <Cards content={post.content} author={post.userName} />;
       })}
