@@ -19,7 +19,7 @@ function Cards(props) {
     // }, []);
 
     return (
-        <div className="card  scale-75 max-w-md my-12 text-lg  bg-base-100 opacity-70 shadow-xl mx-8 image-full ">
+        <div className="card  scale-75  m max-w-md my-12 text-lg  bg-base-700 shadow-xl mx-8 image-full ">
             <figure>
                 <img
                     src={imageUrl}
